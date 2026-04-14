@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panda Smash Token (PST)</title>
+  <meta name="description" content="Panda Smash Token (PST) is a community-driven token on BNB Smart Chain inspired by badminton and the Panda Smash brand." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #f8fafc;
+      --accent: #22c55e;
+      --accent-2: #38bdf8;
+      --line: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .brand-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #14b8a6, #0f766e);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 0 36px;
+    }
+
+    .hero-card,
+    .card {
+      background: rgba(17,24,39,0.8);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 48px;
+      line-height: 1.05;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--line);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #062b14;
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.25);
+      color: #bae6fd;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .logo-box {
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(56,189,248,0.18), transparent 30%),
+        rgba(17,24,39,0.8);
+    }
+
+    .logo-placeholder {
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      border: 2px dashed rgba(255,255,255,0.18);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      padding: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .value {
+      font-size: 20px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin: 12px 0 16px;
+    }
+
+    .list {
+      color: var(--muted);
+      line-height: 1.8;
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 16px 0 28px;
+      font-size: 14px;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      background: rgba(255,255,255,0.06);
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      word-break: break-all;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-badge">🐼</div>
+        <div>Panda Smash Token</div>
+      </div>
+      <a class="btn btn-secondary" href="https://bscscan.com/token/0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">View on BscScan</a>
+    </div>
+
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Panda Smash Token <br />(PST)</h1>
+        <div class="sub">
+          A community-driven token on BNB Smart Chain inspired by badminton and the Panda Smash brand.
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://pancakeswap.finance/swap?outputCurrency=0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap</a>
+          <a class="btn btn-secondary" href="https://dexscreener.com/bsc/0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">View Chart</a>
+        </div>
+        <div class="pill-row">
+          <div class="pill">BNB Smart Chain</div>
+          <div class="pill">BEP20</div>
+          <div class="pill">Community Token</div>
+        </div>
+      </div>
+
+      <div class="hero-card logo-box">
+        <div>
+          <div class="logo-placeholder">
+            Replace this circle with your final Panda Smash logo image.
+            <br /><br />Tip: save your logo as <b>logo.png</b> and place it in the same folder as this file, then replace this placeholder with an &lt;img&gt; tag.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">Symbol</div>
+        <div class="value">PST</div>
+      </div>
+      <div class="card">
+        <div class="label">Network</div>
+        <div class="value">BNB Smart Chain</div>
+      </div>
+      <div class="card">
+        <div class="label">Contract</div>
+        <div class="value"><code>0x23BFdD3D226acEb0FCB2690f7E87946C240963F4</code></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="section-title">About PST</div>
+        <ul class="list">
+          <li>Community-oriented token inspired by Panda Smash.</li>
+          <li>Designed for engagement, branding, and future ecosystem expansion.</li>
+          <li>Tradable on PancakeSwap.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="section-title">Useful Links</div>
+        <ul class="list">
+          <li><a href="https://bscscan.com/token/0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">BscScan</a></li>
+          <li><a href="https://pancakeswap.finance/swap?outputCurrency=0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">PancakeSwap</a></li>
+          <li><a href="https://dexscreener.com/bsc/0x23BFdD3D226acEb0FCB2690f7E87946C240963F4" target="_blank" rel="noopener noreferrer">DexScreener</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="section-title">Social</div>
+        <ul class="list">
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 Panda Smash Token. Built for community and branding.
+    </div>
+  </div>
+</body>
+</html>
